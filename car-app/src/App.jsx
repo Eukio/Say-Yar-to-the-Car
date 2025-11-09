@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react'
+import './styles/colors.css'
 import './App.css'
 import './styles/Header.css'
 import Carousel from './components/Carousel.jsx'
