@@ -9,6 +9,7 @@ import Match from './pages/Match.jsx';
 
 
 import modelsCsv from './data/toyota_models_2025.csv?raw';
+import { PreferencesProvider } from './contexts/PreferencesContext.jsx';
 
 
 function parseCsv(raw) {
@@ -33,16 +34,16 @@ function App() {
 
 
   return (
-    <>
+    <PreferencesProvider>
       <Header active={page} onNavigate={setPage} />
 
 
       <main>
         {page === 'home' && <Home onNavigate={setPage} />}
-        {page === 'preferences' && <Preferences />}
+        {page === 'preferences' && <Preferences models={models}/>}
         {page === 'match' && <Match models={models} />}
       </main>
-    </>
+    </PreferencesProvider>
   );
 }
 

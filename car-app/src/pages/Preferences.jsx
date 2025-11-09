@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import DiscreteSlider from '../components/Slider.jsx'
 import { usePreferences } from '../hooks/usePreferences.js'
+import Match from './Match.jsx';
 
 const price_options = {
         label: "Price",
@@ -26,7 +27,7 @@ const MPG_options = {
         min: 10,
         max: 50,
 };
-export default function Preferences() {
+export default function Preferences({models = []}) {
   // Use the preferences context
   const { preferences, updatePreferences } = usePreferences();
   
@@ -67,43 +68,50 @@ export default function Preferences() {
   };
 
   return (
-    <section style={{
-      padding: '1rem',
+    <section> 
+      <div style={{
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'flex-start',
-      minHeight: '100vh',
-      maxWidth: '600px',
-      margin: '0 auto',
-      gap: '2rem'
-    }}>
+      padding: '2rem',
+    }}> 
       <h2>Preferences</h2>
-      <h3>Price: ${priceValue.toLocaleString()}</h3>
+      <div style={{
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'center',
+      gap: '2rem',
+      width: '100%'
+    }}>
       <div>
+      <h3>Price: ${priceValue.toLocaleString()}</h3>
         <DiscreteSlider 
           options={price_options}
           value={priceValue}
           onChange={handlePriceChange}
         />
       </div>
-      <h3>Seats: {seatValue}</h3>
       <div>
+      <h3>Seats: {seatValue}</h3>
         <DiscreteSlider 
           options={seat_options}
           value={seatValue}
           onChange={handleSeatChange}
         />
       </div>
-      <h3>Miles Per Gallon: {mpgValue}</h3>
       <div>
+      <h3>Miles Per Gallon: {mpgValue}</h3>
         <DiscreteSlider 
           options={MPG_options}
           value={mpgValue}
           onChange={handleMpgChange}
         />
       </div>
-      
+      </div>
+      </div>
+      <Match models={models}></Match>
     </section>
   )
 }
