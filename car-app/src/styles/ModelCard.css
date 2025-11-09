@@ -6,21 +6,22 @@
 }
 
 .model-card {
-  border: 1px solid #e0e0e0;
+  background: var(--color-background);
   border-radius: 8px;
-  padding: 0.75rem;
-  background: #fff;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 1rem;
+  border: 1px solid var(--color-secondary);
 }
 
 .model-card__header {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  gap: 0.5rem;
+  align-items: flex-start;
+  gap: 1rem;
+  color: var(--color-text);
 }
 
 .model-card__title {
@@ -51,14 +52,16 @@
 }
 
 .model-card__button {
-  background: #1f7a8c;
-  color: white;
+  background: var(--color-primary);
+  color: var(--color-background);
   border: none;
-  padding: 0.4rem 0.7rem;
-  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
   cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
 }
 
 .model-card__button:hover {
-  opacity: 0.95;
+  background: var(--color-accent);
 }
