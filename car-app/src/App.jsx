@@ -1,11 +1,10 @@
 import { useMemo, useState } from 'react';
 import './App.css';
 import './styles/Header.css';
-import Carousel from './components/Carousel.jsx';
 import Header from './components/Header.jsx';
 import Home from './pages/Home.jsx';
 import Preferences from './pages/Preferences.jsx';
-import Match from './components/Match.jsx';
+import MatchPage from './pages/MatchPage.jsx';
 
 
 import modelsCsv from './data/toyota_models_2025.csv?raw';
@@ -41,7 +40,7 @@ function App() {
       <main>
         {page === 'home' && <Home onNavigate={setPage} />}
         {page === 'preferences' && <Preferences models={models}/>}
-        {page === 'match' && <Match models={models} />}
+        {page === 'match' && <MatchPage models={models} />}
       </main>
     </PreferencesProvider>
   );

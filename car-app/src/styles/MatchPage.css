@@ -1,0 +1,101 @@
+.match-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.match-page .carousel {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  padding: 2rem;
+  position: relative;
+}
+
+/* Fix for carousel inner display */
+.match-page .carousel-inner {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.match-page .carousel-item {
+  display: none; /* Hide all items by default */
+  width: 100%;
+  margin: 0;
+  padding: 2rem;
+  transition: transform 0.6s ease-in-out;
+}
+
+/* Show active item */
+.match-page .carousel-item.active {
+  display: block;
+}
+
+/* Remove negative margins */
+.match-page .carousel-item > * {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.match-page .model-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: auto;
+  min-height: 400px;
+}
+
+/* Improve carousel controls */
+.match-page .carousel-control-prev,
+.match-page .carousel-control-next {
+  width: 80px;
+  height: 80px;
+  background: rgba(202, 0, 0, 0.5);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 1rem;
+  opacity: 0.8;
+  z-index: 10;
+  font-size: 3rem;
+ text-decoration: none; 
+
+}
+
+.match-page .carousel-control-prev:hover,
+.match-page .carousel-control-next:hover {
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 1;
+}
+
+.match-page .carousel-indicators {
+  bottom: -40px;
+  margin-bottom: 0;
+}
+
+.match-page .carousel-indicators [data-bs-target] {
+  background-color: #000;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+/* Add slide animations */
+.carousel-item-next:not(.carousel-item-start),
+.active.carousel-item-end {
+  transform: translateX(100%);
+}
+
+.carousel-item-prev:not(.carousel-item-end),
+.active.carousel-item-start {
+  transform: translateX(-100%);
+}
+
+.carousel-item-next.carousel-item-start,
+.carousel-item-prev.carousel-item-end {
+  transform: translateX(0);
+}
+
