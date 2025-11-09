@@ -9,7 +9,8 @@ import Preferences from './pages/Preferences.jsx'
 import Match from './pages/Match.jsx'
 
 // Import the CSV as raw text using Vite's ?raw suffix
-import modelsCsv from '../../toyota_models_2025.csv?raw'
+import modelsCsv from './data/toyota_models_2025.csv?raw'
+import { PreferencesProvider } from './contexts/PreferencesContext.jsx'
 
 function parseCsv(raw) {
   if (!raw) return []
@@ -31,7 +32,7 @@ function App() {
   const [page, setPage] = useState('home') // 'home' | 'preferences' | 'match'
 
   return (
-    <>
+    <PreferencesProvider>
       <Header active={page} onNavigate={setPage} />
 
       <main>
@@ -48,7 +49,7 @@ function App() {
 
         {page === 'match' && <Match models={models} />}
       </main>
-    </>
+    </PreferencesProvider>
   )
 }
 
