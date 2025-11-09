@@ -1,9 +1,7 @@
 import React from 'react'
 import '../styles/ModelCard.css'
 
-
-
-function ModelCard({ model }) {
+function CarouselCard({ model }) {
   if (!model) return null
 
   const {
@@ -72,4 +70,4 @@ function ModelCard({ model }) {
   )
 }
 
-export default ModelCard
+export default CarouselCard
