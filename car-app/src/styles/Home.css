@@ -1,0 +1,64 @@
+
+.toyota-logo{
+    width: 5rem;
+    height: auto;
+    margin-bottom: 20px;
+}
+.ignition-logo{
+    width: 50rem;
+    height: auto;
+    margin-bottom: 20px;
+}
+.main-home {
+    margin-bottom: 20px;
+}
+.main-home div {
+    text-align: center;
+}
+.heading1{
+    
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color:  #E90A1E;
+}
+.norm-text{
+   
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.start-button {
+  width: 20rem;           /* Adjust to your preferred size */
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: block;
+  margin: 2rem auto 0;    /* Center horizontally with margin-top */
+  border-radius: 3rem;   /* Slightly rounded corners */
+}
+
+.start-button:hover {
+  transform: scale(1.05);        /* Slight zoom effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* subtle shadow on hover */
+}
+
+.start-button:active {
+  transform: scale(0.95);        /* Pressed-down effect when clicked */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.norm-text {
+padding: 2.5rem;
+  font-size: 2rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.norm-text .highlight {
+
+  font-weight: bold;   
+  color: #000000;         
+  padding: 0 0.2rem;      
+  border-radius: 3px;     
+  font-size: 2rem;
+
+}
