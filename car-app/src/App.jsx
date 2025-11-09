@@ -39,7 +39,7 @@ function App() {
 
       <main>
         {page === 'home' && <Home onNavigate={setPage} />}
-        {page === 'preferences' && <Preferences models={models}/>}
+        {page === 'preferences' && <Preferences models={models} onNavigate={setPage}/>}
         {page === 'match' && <MatchPage models={models} />}
       </main>
     </PreferencesProvider>
