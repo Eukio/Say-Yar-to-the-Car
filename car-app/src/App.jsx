@@ -45,7 +45,7 @@ function App() {
           </>
         )}
 
-        {page === 'preferences' && <Preferences />}
+        {page === 'preferences' && <Preferences models={models}/>}
 
         {page === 'match' && <Match models={models} />}
       </main>
