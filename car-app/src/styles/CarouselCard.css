@@ -1,12 +1,12 @@
-.models-grid {
+.carousel-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
   margin-top: 1rem;
 }
 
-.model-card {
-  background: rgba(255, 255, 255, 0.1);
+.carousel-card {
+  background: white;
   border-radius: 24px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   padding: 2.5rem;
@@ -16,7 +16,7 @@
   /* border: 1px solid var(--color-secondary); */
 }
 
-.model-card__header {
+.carousel-card__header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -24,18 +24,18 @@
   color: var(--color-text);
 }
 
-.model-card__title {
+.carousel-card__title {
   font-size: 3.5rem;
   font-weight: 700;
 }
 
-.model-card__price {
+.carousel-card__price {
   color: var(--color-accent);
   font-size: 2.5rem;
   font-weight: 600;
 }
 
-.model-card__list {
+.carousel-card__list {
   list-style: none;
   margin: 0.5rem 0;
   padding: 0;
@@ -46,16 +46,16 @@
   gap: 0.25rem 1rem;
 }
 
-.model-card__list li {
+.carousel-card__list li {
   margin: 0;
 }
 
-.model-card__footer {
+.carousel-card__footer {
   display: flex;
   justify-content: flex-end;
 }
 
-.model-card__button {
+.carousel-card__button {
   background: var(--color-primary);
   color: var(--color-background);
   border: none;
@@ -69,6 +69,6 @@
   transition: background-color 0.2s;
 }
 
-.model-card__button:hover {
+.carousel-card__button:hover {
   background: var(--color-accent);
 }

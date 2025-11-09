@@ -33,17 +33,17 @@ function CarouselCard({ model }) {
   console.log('Model Id:', Id, 'Car Name:', Car_Name)
 
   return (
-    <article className="model-card" style={{
+    <article className="carousel-card" style={{
       display: 'flex',
       flexDirection: 'column',
       height: '100%'
     }}>
-      <header className="model-card__header">
-        <h3 className="model-card__title">{Car_Name}</h3>
-        {Low_Price && <div className="model-card__price">${Low_Price}</div>}
+      <header className="carousel-card__header">
+        <h3 className="carousel-card__title">{Car_Name}</h3>
+        {Low_Price && <div className="carousel-card__price">${Low_Price}</div>}
       </header>
       {Id && (
-        <picture className="model-card__image">
+        <picture className="carousel-card__image">
           <source srcSet={getImageUrl(Id, 'avif')} type="image/avif" />
           <source srcSet={getImageUrl(Id, 'webp')} type="image/webp" />
           <img src={getImageUrl(Id, 'jpg')} alt={Car_Name} style={{
@@ -54,7 +54,7 @@ function CarouselCard({ model }) {
           }}/>
         </picture>
       )}
-      <ul className="model-card__list" style={{ flexGrow: 1 }}>
+      <ul className="carousel-card__list" style={{ flexGrow: 1 }}>
         {MPG && <li><strong>MPG:</strong> {MPG}</li>}
         {Seats && <li><strong>Seats:</strong> {Seats}</li>}
         {Cargo_Space && <li><strong>Cargo:</strong> {Cargo_Space} cu ft</li>}
@@ -65,7 +65,7 @@ function CarouselCard({ model }) {
         {lease && <li><strong>Lease:</strong> ${lease} / mo {leaseMonths ? `for ${leaseMonths} months` : ''}</li>}
       </ul>
 
-     <footer className="model-card__footer" style={{
+     <footer className="carousel-card__footer" style={{
   display: 'flex',
   justifyContent: 'flex-end',
   marginTop: 'auto',
@@ -73,13 +73,13 @@ function CarouselCard({ model }) {
 }}>
   {href ? (
     <button
-      className="model-card__button"
+      className="carousel-card__button"
       onClick={() => window.open(href, "_blank")}
     >
       Take Me for a Test Drive!
     </button>
   ) : (
-    <button className="model-card__button" disabled>
+    <button className="carousel-card__button" disabled>
       Take Me for a Test Drive!
     </button>
   )}
