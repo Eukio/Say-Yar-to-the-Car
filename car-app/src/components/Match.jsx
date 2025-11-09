@@ -1,5 +1,5 @@
 import React from 'react'
-import ModelCard from '../components/ModelCard'
+import ModelCard from './ModelCard.jsx'
 import { usePreferences } from '../hooks/usePreferences.js'
 
 export default function Match({ models = [] }) {

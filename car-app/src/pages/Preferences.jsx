@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import DiscreteSlider from '../components/Slider.jsx'
 import { usePreferences } from '../hooks/usePreferences.js'
-import Match from './Match.jsx';
+import Match from '../components/Match.jsx';
 
 const price_options = {
         label: "Price",
@@ -77,9 +77,16 @@ export default function Preferences({models = []}) {
       padding: '2rem',
     }}> 
       <h2>Preferences</h2>
-      <div className="flex md:flex-row items-center justify-center gap-4 md:gap-8 w-full">
-      <div className="md:w-auto">
-      <h3>Price: ${priceValue.toLocaleString()}</h3>
+      <div style={{
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'center',
+      gap: '2rem',
+      width: '100%'
+    }}>
+      <div>
+      <h3>Max Price: ${priceValue.toLocaleString()}</h3>
         <DiscreteSlider 
           options={price_options}
           value={priceValue}

@@ -5,7 +5,7 @@ import Carousel from './components/Carousel.jsx';
 import Header from './components/Header.jsx';
 import Home from './pages/Home.jsx';
 import Preferences from './pages/Preferences.jsx';
-import Match from './pages/Match.jsx';
+import Match from './components/Match.jsx';
 
 
 import modelsCsv from './data/toyota_models_2025.csv?raw';
