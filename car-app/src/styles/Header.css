@@ -19,6 +19,11 @@
   font-size: 1.1rem;
 }
 
+.site-header__brand img {
+  height: 34px;
+  width: auto;
+}
+
 .site-header__nav {
   display: flex;
   gap: 0.5rem;

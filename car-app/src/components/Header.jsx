@@ -1,4 +1,5 @@
 import React from 'react'
+import ignitionLogoDark from '../assets/logos/ignition_logo_dark.png'
 
 // Header props:
 // - active: 'home' | 'preferences' | 'match'
@@ -6,7 +7,9 @@ import React from 'react'
 export default function Header({ active = 'home', onNavigate = () => {} }) {
   return (
     <header className="site-header">
-      <div className="site-header__brand">Ignition</div>
+      <div className="site-header__brand" onClick={() => onNavigate('home')} style={{ cursor: 'pointer' }}>
+        <img src={ignitionLogoDark} alt="Ignition" className="h-4"/>
+      </div>
       <nav className="site-header__nav" aria-label="Main navigation">
         <button
           className={`site-header__link ${active === 'home' ? 'active' : ''}`}
