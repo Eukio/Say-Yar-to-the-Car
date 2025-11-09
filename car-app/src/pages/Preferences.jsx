@@ -1,7 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import DiscreteSlider from '../components/Slider.jsx'
 import { usePreferences } from '../hooks/usePreferences.js'
+<<<<<<< HEAD
 import Match from './Match.jsx';
+=======
+>>>>>>> 3346e5fe77a805de9b25a4b9004aaa14826932c5
 
 const price_options = {
         label: "Price",
@@ -27,7 +30,11 @@ const MPG_options = {
         min: 10,
         max: 50,
 };
+<<<<<<< HEAD
 export default function Preferences({models = []}) {
+=======
+export default function Preferences() {
+>>>>>>> 3346e5fe77a805de9b25a4b9004aaa14826932c5
   // Use the preferences context
   const { preferences, updatePreferences } = usePreferences();
   
@@ -68,12 +75,18 @@ export default function Preferences({models = []}) {
   };
 
   return (
+<<<<<<< HEAD
     <section> 
       <div style={{
+=======
+    <section style={{
+      padding: '1rem',
+>>>>>>> 3346e5fe77a805de9b25a4b9004aaa14826932c5
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'flex-start',
+<<<<<<< HEAD
       padding: '2rem',
     }}> 
       <h2>Preferences</h2>
@@ -87,31 +100,55 @@ export default function Preferences({models = []}) {
     }}>
       <div>
       <h3>Price: ${priceValue.toLocaleString()}</h3>
+=======
+      minHeight: '100vh',
+      maxWidth: '600px',
+      margin: '0 auto',
+      gap: '2rem'
+    }}>
+      <h2>Preferences</h2>
+      <h3>Price: ${priceValue.toLocaleString()}</h3>
+      <div>
+>>>>>>> 3346e5fe77a805de9b25a4b9004aaa14826932c5
         <DiscreteSlider 
           options={price_options}
           value={priceValue}
           onChange={handlePriceChange}
         />
       </div>
+<<<<<<< HEAD
       <div>
       <h3>Seats: {seatValue}</h3>
+=======
+      <h3>Seats: {seatValue}</h3>
+      <div>
+>>>>>>> 3346e5fe77a805de9b25a4b9004aaa14826932c5
         <DiscreteSlider 
           options={seat_options}
           value={seatValue}
           onChange={handleSeatChange}
         />
       </div>
+<<<<<<< HEAD
       <div>
       <h3>Miles Per Gallon: {mpgValue}</h3>
+=======
+      <h3>Miles Per Gallon: {mpgValue}</h3>
+      <div>
+>>>>>>> 3346e5fe77a805de9b25a4b9004aaa14826932c5
         <DiscreteSlider 
           options={MPG_options}
           value={mpgValue}
           onChange={handleMpgChange}
         />
       </div>
+<<<<<<< HEAD
       </div>
       </div>
       <Match models={models}></Match>
+=======
+      
+>>>>>>> 3346e5fe77a805de9b25a4b9004aaa14826932c5
     </section>
   )
 }

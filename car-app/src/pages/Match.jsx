@@ -18,14 +18,22 @@ export default function Match({ models = [] }) {
 
   return (
     <section style={{padding: '1rem'}}>
+<<<<<<< HEAD
       {/* <h2>Match</h2>
+=======
+      <h2>Match</h2>
+>>>>>>> 3346e5fe77a805de9b25a4b9004aaa14826932c5
       <div style={{ marginBottom: '1rem', padding: '1rem', backgroundColor: '#f5f5f5', borderRadius: '8px' }}>
         <h3>Current Preferences:</h3>
         <p>Max Price: ${preferences.price.toLocaleString()}</p>
         <p>Min MPG: {preferences.mpg}</p>
         <p>Min Seats: {preferences.seats}</p>
       </div>
+<<<<<<< HEAD
        */}
+=======
+      
+>>>>>>> 3346e5fe77a805de9b25a4b9004aaa14826932c5
       {filteredModels.length === 0 ? (
         <p>No models match your current preferences. Try adjusting your preferences to see more options.</p>
       ) : (
