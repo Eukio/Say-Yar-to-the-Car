@@ -4,6 +4,7 @@ import '../styles/CarouselCard.css'
 function CarouselCard({ model }) {
   if (!model) return null
 
+
   const {
     Id,
     Car_Name,
@@ -17,12 +18,18 @@ function CarouselCard({ model }) {
     APR,
     ['lease-months']: leaseMonths,
     lease,
+    Link
   } = model
+
+
+  const href = Link ? String(Link).trim().split(/\s+/)[0] : ''
+
 
   const getImageUrl = (name, format) => {
     const url = new URL(`../assets/${name}.${format}`, import.meta.url).href
     return url
   }
+
   console.log('Model Id:', Id, 'Car Name:', Car_Name)
 
   return (
@@ -58,14 +65,26 @@ function CarouselCard({ model }) {
         {lease && <li><strong>Lease:</strong> ${lease} / mo {leaseMonths ? `for ${leaseMonths} months` : ''}</li>}
       </ul>
 
-      <footer className="model-card__footer" style={{
-        display: 'flex',
-        justifyContent: 'flex-end',
-        marginTop: 'auto',
-        padding: '1rem'
-      }}>
-        <button className="model-card__button">Take me for a test drive!</button>
-      </footer>
+     <footer className="model-card__footer" style={{
+  display: 'flex',
+  justifyContent: 'flex-end',
+  marginTop: 'auto',
+  padding: '1rem'
+}}>
+  {href ? (
+    <button
+      className="model-card__button"
+      onClick={() => window.open(href, "_blank")}
+    >
+      Take Me for a Test Drive!
+    </button>
+  ) : (
+    <button className="model-card__button" disabled>
+      Take Me for a Test Drive!
+    </button>
+  )}
+</footer>
+
     </article>
   )
 }

@@ -19,8 +19,11 @@ function ModelCard({ model }) {
     APR,
     ['lease-months']: leaseMonths,
     lease,
+    Link
   } = model
 
+  const href = Link ? String(Link).trim().split(/\s+/)[0] : ''
+  
   const getImageUrl = (name, format) => {
     const url = new URL(`../assets/${name}.${format}`, import.meta.url).href
     return url
@@ -66,10 +69,23 @@ function ModelCard({ model }) {
         marginTop: 'auto',
         padding: '1rem'
       }}>
-        <button className="model-card__button">Learn more</button>
+          {href ? (
+            <a
+              className="model-card__button"
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: 'none', display: 'inline-block' }}
+            >
+              Learn more
+            </a>
+          ) : (
+            <button className="model-card__button" disabled>Learn more</button>
+          )}
       </footer>
     </article>
   )
 }
+
 
 export default ModelCard
