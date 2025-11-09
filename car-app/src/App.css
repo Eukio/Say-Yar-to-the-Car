@@ -1,5 +1,12 @@
-#root {
-
+:root {
+  --color-background: #FAFAFA;
+  --color-primary: #E90A1E;
+  --color-secondary: #979797;
+  --color-accent: #F57C00;
+  --color-dark: #312828;
+  --color-text: #000000;
 }
-
-
+/* Apply background color to body */
+body {
+  color: var(--color-text);
+}
