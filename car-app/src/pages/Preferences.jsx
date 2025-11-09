@@ -76,7 +76,11 @@ export default function Preferences({models = []}) {
       justifyContent: 'flex-start',
       padding: '2rem',
     }}> 
-      <h2>Preferences</h2>
+      <h2 style={{
+      fontSize: '2rem',
+      fontWeight: 700,
+      marginBottom: '1.5rem',
+    }}>Preferences</h2>
       <div style={{
       display: 'flex',
       flexDirection: 'row',
@@ -93,16 +97,16 @@ export default function Preferences({models = []}) {
           onChange={handlePriceChange}
         />
       </div>
-      <div>
-      <h3>Min Seats: {seatValue}</h3>
+      <div className="md:w-auto">
+      <h3>Seats: {seatValue}</h3>
         <DiscreteSlider 
           options={seat_options}
           value={seatValue}
           onChange={handleSeatChange}
         />
       </div>
-      <div>
-      <h3>Min Miles Per Gallon: {mpgValue}</h3>
+      <div className="md:w-auto">
+      <h3>Miles Per Gallon: {mpgValue}</h3>
         <DiscreteSlider 
           options={MPG_options}
           value={mpgValue}

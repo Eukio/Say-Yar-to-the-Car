@@ -9,6 +9,32 @@
     height: auto;
     margin-bottom: 20px;
 }
+
+.ignition-logo-responsive {
+    width: 50rem;
+    max-width: 50rem;
+}
+
+/* Mobile - smallest screens */
+@media (max-width: 640px) {
+    .ignition-logo-responsive {
+        max-width: 20rem;
+    }
+}
+
+/* Tablet - medium screens */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .ignition-logo-responsive {
+        max-width: 35rem;
+    }
+}
+
+/* Desktop - large screens */
+@media (min-width: 1025px) {
+    .ignition-logo-responsive {
+        max-width: 50rem;
+    }
+}
 .main-home {
     margin-bottom: 20px;
 }
